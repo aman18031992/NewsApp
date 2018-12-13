@@ -18,6 +18,7 @@ public class JSONParser {
     private InputStream is = null;
     private String jsonString = "";
     private JSONObject jsonObject = null;
+    public static final int timeOut = 1000;  
 
     //constructor
     public JSONParser() {
@@ -28,8 +29,8 @@ public class JSONParser {
             URL url = new URL(myUrl);
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
             httpURLConnection.setRequestMethod("GET");
-            httpURLConnection.setConnectTimeout(1000);
-            httpURLConnection.setReadTimeout(1000);
+            httpURLConnection.setConnectTimeout(timeOut);
+            httpURLConnection.setReadTimeout(timeOut);
             httpURLConnection.connect();
             is = httpURLConnection.getInputStream();
         } catch (MalformedURLException e) {

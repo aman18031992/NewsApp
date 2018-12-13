@@ -7,25 +7,25 @@ import java.io.Serializable;
  * This class is used to store basic information of news.
  */
 public class NewsItem implements Serializable {
-    private String mTitle;
-    private String mPublicationDate;
-    private String mWebUrl;
+    private String Title;
+    private String PublicationDate;
+    private String WebUrl;
 
     public NewsItem(String title, String publicationDate, String webUrl) {
-        mTitle = title;
-        mPublicationDate = publicationDate;
-        mWebUrl = webUrl;
+        Title = title;
+        PublicationDate = publicationDate;
+        WebUrl = webUrl;
     }
 
     public String getTitle() {
-        return mTitle;
+        return Title;
     }
 
     public String getPublicationDate() {
-        return mPublicationDate;
+        return PublicationDate;
     }
 
     public String getWebUrl() {
-        return mWebUrl;
+        return WebUrl;
     }
 }
